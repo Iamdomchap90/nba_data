@@ -1,7 +1,9 @@
-import pytest
 from unittest.mock import MagicMock, patch
-from nba_scraper import NBAScraper
+
+import pytest
 from selenium.common.exceptions import TimeoutException
+
+from nba_scraper import NBAScraper
 
 
 class TestNBAScraper:
