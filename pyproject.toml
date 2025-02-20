@@ -14,11 +14,20 @@ selenium = "^4.27.1"
 pandas = "^2.2.3"
 wheel = "^0.45.1"
 loguru = "^0.7.3"
+pytest = "^8.3.4"
 
 
 [tool.poetry.group.dev.dependencies]
 pandas = "^2.2.3"
 wheel = "^0.45.1"
+coverage = "^7.6.12"
+black = "^25.1.0"
+flake8 = "^7.1.2"
+
+[tool.black]
+line-length = 79
+target-version = ['py39']
+include = '\.pyi?$'
 
 [build-system]
 requires = ["poetry-core"]
