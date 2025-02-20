@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "nba-data-scraper"
+version = "0.1.0"
+description = ""
+authors = ["Dominic Chaple <d0mch4pl3@gmail.com>"]
+readme = "README.md"
+packages = [{include = "nba_data"}]
+
+[tool.poetry.dependencies]
+python = ">3.9, <4.0"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.12.3"
+selenium = "^4.27.1"
+pandas = "^2.2.3"
+wheel = "^0.45.1"
+loguru = "^0.7.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pandas = "^2.2.3"
+wheel = "^0.45.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
