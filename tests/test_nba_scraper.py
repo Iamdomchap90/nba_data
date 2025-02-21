@@ -3,7 +3,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 from selenium.common.exceptions import TimeoutException
 
-from nba_scraper import NBAScraper
+from src.nba_scraper import NBAScraper
 
 
 class TestNBAScraper:
@@ -11,11 +11,11 @@ class TestNBAScraper:
 
     @pytest.fixture
     def scraper(self):
-        return NBAScraper("")
+        return NBAScraper("https://www.nba.com/stats/teams/traditional", "")
 
     @pytest.fixture
     def mock_webdriver(self):
-        with patch("nba_scraper.webdriver.Chrome") as mock:
+        with patch("src.nba_scraper.webdriver.Chrome") as mock:
             yield mock
 
     @pytest.fixture

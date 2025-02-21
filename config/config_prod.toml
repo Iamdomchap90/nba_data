@@ -1,0 +1,12 @@
+# Only works with live S3 account
+[s3]
+bucket = "prod-bucket"
+use_moto = false
+
+
+[scraper]
+DOMAIN = "https://www.nba.com/stats/teams/traditional"
+endpoints = [
+  { name = "regular_season", url_path = "", s3_key = "nba_regular_season_{date}.csv" },
+  { name = "pre_season", url_path = "?SeasonType=Pre+Season", s3_key = "nba_pre_season_{date}.csv" }
+]

@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Dominic Chaple <d0mch4pl3@gmail.com>"]
 readme = "README.md"
-packages = [{include = "nba_data"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = ">3.9, <4.0"
@@ -15,7 +15,13 @@ pandas = "^2.2.3"
 wheel = "^0.45.1"
 loguru = "^0.7.3"
 pytest = "^8.3.4"
+boto3 = "^1.36.25"
+toml = "^0.10.2"
+tomlkit = "^0.13.2"
+moto = "^5.0.28"
 
+[tool.poetry.scripts]
+test = "run_tests:main"
 
 [tool.poetry.group.dev.dependencies]
 pandas = "^2.2.3"
